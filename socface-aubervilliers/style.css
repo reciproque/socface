@@ -1,0 +1,295 @@
+@font-face {
+    font-family: Inter;
+    src: url('src/assets/Inter.ttf');
+}
+
+@font-face {
+    font-family: DMSans;
+    src: url('src/assets/DMSans.ttf');
+}
+
+:root {
+    color: var(--primaires-noir-100);
+    background-color: var(--primaires-noir-10);
+    font-family: DMSans;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+.internal-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+p {
+    text-align: justify;
+}
+
+.paragraphe {
+    color: var(--Text-Default-Default, #ECEEEE);
+    white-space: pre-line;
+    font-family: DMSans;
+    font-size: var(--Text-Sizes-Body-Medium, 18px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 96px;
+
+}
+
+.content {
+    margin: 0 160px;
+    padding: 96px 30vh;
+}
+
+@media(max-width: 1510px) {
+    .content {
+        margin: 0 80px;
+        padding: 96px 0;
+    }
+}
+
+h2 {
+    color: var(--Text-Default-Accent, #B5994F);
+    font-size: var(--Text-Sizes-H2, 52px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+h3 {
+    color: var(--Text-Default-Default, #ECEEEE);
+    font-size: var(--Text-Sizes-H5, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    }/* Typography */:root
+    {
+        /* Desktop */
+        /* number */
+        --text-sizes-body-x-small: 0.75rem;
+        --text-sizes-body-small: 0.875rem;
+        --text-sizes-body-regular: 1rem;
+        --text-sizes-body-medium: 1.125rem;
+        --text-sizes-body-large: 1.375rem;
+        --text-sizes-h6: 1.375rem;
+        --text-sizes-h5: 1.75rem;
+        --text-sizes-h4: 2.25rem;
+        --text-sizes-h3: 2.75rem;
+        --text-sizes-h2: 3.25rem;
+        --text-sizes-h1: 4.5rem;
+        /* Mobile */
+        /* number */
+        --text-sizes-body-x-small: 0.625rem;
+        --text-sizes-body-regular: 0.75rem;
+        --text-sizes-body-small: 0.75rem;
+        --text-sizes-body-medium: 1rem;
+        --text-sizes-body-large: 1.125rem;
+        --text-sizes-h6: 1.125rem;
+        --text-sizes-h5: 1.25rem;
+        --text-sizes-h4: 1.5rem;
+        --text-sizes-h3: 2rem;
+        --text-sizes-h2: 2.5rem;
+        --text-sizes-h1: 2.75rem;
+        }/* Sizing & Spacing */:root
+        {
+            /* Desktop */
+            /* number */
+            --container-container-small: 48rem;
+            --container-container-medium: 64rem;
+            --container-container-large: 80rem;
+            --max-width-max-width-xxsmall: 20rem;
+            --max-width-max-width-xsmall: 25rem;
+            --max-width-max-width-small: 30rem;
+            --max-width-max-width-medium: 35rem;
+            --max-width-max-width-large: 48rem;
+            --max-width-max-width-xlarge: 64rem;
+            --max-width-max-width-xxlarge: 80rem;
+            --page-padding-padding-global: 4rem;
+            --section-padding-padding-section-small: 3rem;
+            --section-padding-padding-section-medium: 5rem;
+            --section-padding-padding-section-large: 7rem;
+            /* Mobile */
+            /* number */
+            --container-container-small: 48rem;
+            --container-container-medium: 64rem;
+            --container-container-large: 80rem;
+            --max-width-max-width-xxsmall: 20rem;
+            --max-width-max-width-xsmall: 25rem;
+            --max-width-max-width-small: 30rem;
+            --max-width-max-width-medium: 35rem;
+            --max-width-max-width-large: 48rem;
+            --max-width-max-width-xlarge: 64rem;
+            --max-width-max-width-xxlarge: 80rem;
+            --page-padding-padding-global: 1.25rem;
+            --section-padding-padding-section-small: 2rem;
+            --section-padding-padding-section-medium: 3rem;
+            --section-padding-padding-section-large: 4rem;
+            }/* Colors Primitives */:root
+            {
+                /* Mode 1 */
+                /* color */
+                --primaires-noir-10: #070808;
+                --primaires-noir-100: #eceeee;
+                --primaires-noir-20: #1f2223;
+                --primaires-noir-30-ref: #383d3e;
+                --primaires-noir-40: #505758;
+                --primaires-noir-50: #687173;
+                --primaires-noir-60: #818b8d;
+                --primaires-noir-70: #9ca4a5;
+                --primaires-noir-80: #b7bcbe;
+                --primaires-noir-90: #d1d5d6;
+                --primaires-red-10: #fdf8f7;
+                --primaires-red-100: #1f0d0a;
+                --primaires-red-20: #f1d6d0;
+                --primaires-red-30: #e5b4a9;
+                --primaires-red-40: #d99282;
+                --primaires-red-50: #cc6f5b;
+                --primaires-red-60-ref: #bc513a;
+                --primaires-red-70: #94402e;
+                --primaires-red-80: #6d2f22;
+                --primaires-red-90: #461e16;
+                --secondaires-beige-10: #fcfcfc;
+                --secondaires-beige-100: #272111;
+                --secondaires-beige-20: #f1ecdf;
+                --secondaires-beige-30-ref: #e2d7ba;
+                --secondaires-beige-40: #d3c397;
+                --secondaires-beige-50: #c4ae73;
+                --secondaires-beige-60: #b5994f;
+                --secondaires-beige-70: #937c3e;
+                --secondaires-beige-80: #6f5e2f;
+                --secondaires-beige-90: #4b3f20;
+                --secondaires-orange-10: #fefcfb;
+                --secondaires-orange-100: #251608;
+                --secondaires-orange-20: #f5e1d1;
+                --secondaires-orange-30: #ebc6a8;
+                --secondaires-orange-40: #e2ab7e;
+                --secondaires-orange-50-ref: #d99156;
+                --secondaires-orange-60: #cc752e;
+                --secondaires-orange-70: #a25d25;
+                --secondaires-orange-80: #79451b;
+                --secondaires-orange-90: #4f2d12;
+                --secondaires-vert-10: #fafbf9;
+                --secondaires-vert-100: #141811;
+                --secondaires-vert-20: #e0e5db;
+                --secondaires-vert-30-ref: #c7d1bf;
+                --secondaires-vert-40: #acbba0;
+                --secondaires-vert-50: #92a582;
+                --secondaires-vert-60: #788e66;
+                --secondaires-vert-70: #5f7151;
+                --secondaires-vert-80: #46533c;
+                --secondaires-vert-90: #2d3526;
+                }/* Size Primitives */:root
+                {
+                    /* Mode 1 */
+                    /* number */
+                    --0: 0;
+                    --025: 0.0625rem;
+                    --050: 0.125rem;
+                    --100: 0.25rem;
+                    --150: 0.375rem;
+                    --200: 0.5rem;
+                    --250: 0.625rem;
+                    --300: 0.75rem;
+                    --400: 1rem;
+                    --450: 1.125rem;
+                    --500: 1.25rem;
+                    --600: 1.5rem;
+                    --800: 2rem;
+                    --1000: 2.5rem;
+                    --1200: 3rem;
+                    --1400: 3.5rem;
+                    --1600: 4rem;
+                    --2000: 5rem;
+                    --2400: 6rem;
+                    --4000: 10rem;
+                    }/* Colors */:root
+                    {
+                        /* Mode 1 */
+                        /* color */
+                        --background-brand-01: var(--primaires-noir-10);
+                        --background-brand-02: var(--primaires-noir-20);
+                        --background-brand-03: var(--primaires-noir-30-ref);
+                        --background-brand-04: var(--primaires-noir-40);
+                        --background-brand-accent: var(--secondaires-beige-90);
+                        --background-disabled-default: var(--primaires-red-100);
+                        --background-interactive-default: var(--primaires-red-60-ref);
+                        --background-interactive-default-hover: var(--primaires-red-80);
+                        --background-interactive-menu: var(--background-brand-03);
+                        --background-interactive-menu-activated: var(--primaires-noir-50);
+                        --background-interactive-menu-activated-hover: var(--primaires-red-60-ref);
+                        --background-interactive-menu-activated-low-emphasis: var(--primaires-noir-40);
+                        --background-interactive-menu-hover: var(--background-brand-04);
+                        --background-interactive-on-image: var(--primaires-noir-10);
+                        --background-interactive-on-image-activated: var(--primaires-noir-10);
+                        --background-interactive-on-image-hover: var(--primaires-red-10);
+                        --background-interactive-overlay: #00000080;
+                        --background-utilities-measurement: var(--primaires-red-20);
+                        --background-utilities-section-background: var(--primaires-noir-100);
+                        --background-utilities-section-background-inverse: var(--primaires-noir-10);
+                        --border-disabled-default: var(--primaires-red-100);
+                        --border-disabled-ghost: var(--primaires-noir-30-ref);
+                        --border-disabled-on-disabled: var(--primaires-red-80);
+                        --border-interactive-default: var(--primaires-red-60-ref);
+                        --border-interactive-default-hover: var(--primaires-red-30);
+                        --border-interactive-ghost: var(--primaires-noir-100);
+                        --border-interactive-ghost-hover: var(--primaires-noir-70);
+                        --border-neutral-accent: var(--secondaires-beige-90);
+                        --border-neutral-default: var(--primaires-noir-30-ref);
+                        --border-neutral-high: var(--primaires-noir-70);
+                        --border-neutral-medium: var(--primaires-noir-50);
+                        --border-neutral-on-accent: var(--secondaires-beige-70);
+                        --icon-default-default: var(--primaires-noir-100);
+                        --icon-default-secondary: var(--primaires-noir-80);
+                        --icon-disabled-default: var(--primaires-red-80);
+                        --icon-disabled-ghost: var(--primaires-noir-30-ref);
+                        --icon-disabled-on-disabled: var(--primaires-red-80);
+                        --icon-interactive-default: var(--primaires-red-50);
+                        --icon-interactive-default-hover: var(--primaires-red-30);
+                        --icon-interactive-ghost: var(--primaires-noir-100);
+                        --icon-interactive-ghost-hover: var(--primaires-noir-70);
+                        --icon-interactive-menu: var(--primaires-noir-100);
+                        --icon-interactive-menu-activated: var(--primaires-noir-100);
+                        --icon-interactive-menu-hover: var(--primaires-noir-100);
+                        --icon-interactive-menu-low-emphasis: var(--primaires-noir-100);
+                        --icon-interactive-on-image: var(--primaires-noir-100);
+                        --icon-interactive-on-image-hover: var(--primaires-noir-100);
+                        --icon-interactive-on-interactive-bg: var(--primaires-red-10);
+                        --icon-interactive-on-interactive-bg-hover: var(--primaires-red-10);
+                        --icon-interactive-placeholder: var(--primaires-noir-70);
+                        --text-default-accent: var(--secondaires-beige-60);
+                        --text-default-default: var(--primaires-noir-100);
+                        --text-default-on-accent: var(--secondaires-beige-40);
+                        --text-default-secondary: var(--primaires-noir-80);
+                        --text-disabled-default: var(--primaires-red-80);
+                        --text-disabled-ghost: var(--primaires-noir-30-ref);
+                        --text-disabled-on-disabled: var(--primaires-red-80);
+                        --text-interactive-default: var(--primaires-red-50);
+                        --text-interactive-default-hover: var(--primaires-red-30);
+                        --text-interactive-ghost: var(--primaires-noir-100);
+                        --text-interactive-ghost-2: var(--primaires-noir-100);
+                        --text-interactive-ghost-hover: var(--primaires-noir-70);
+                        --text-interactive-ghost-hover-2: var(--primaires-noir-80);
+                        --text-interactive-menu: var(--primaires-noir-100);
+                        --text-interactive-menu-activated: var(--primaires-noir-100);
+                        --text-interactive-menu-hover: var(--primaires-noir-100);
+                        --text-interactive-menu-low-emphasis: var(--primaires-noir-100);
+                        --text-interactive-on-image: var(--primaires-noir-100);
+                        --text-interactive-on-image-hover: var(--primaires-noir-100);
+                        --text-interactive-on-interactive-bg: var(--primaires-red-10);
+                        --text-interactive-on-interactive-bg-hover: var(--primaires-red-10);
+                        --text-interactive-placeholder: var(--primaires-noir-70);
+                        --text-positive-default: var(--menthe-100);
+                        --text-positive-on-positive: var(--text-default-on-coloful);
+                        --text-positive-secondary: var(--menthe-10);
+                    }
