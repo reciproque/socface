@@ -4,6 +4,10 @@ const props = defineProps({
     data: {
         type: Object,
         required: true
+    },
+    index: {
+        type: Number,
+        required: true
     }
 })
 
@@ -18,16 +22,19 @@ const getResultats = () => {
             const desc = props.data[descKey]
 
             const liens = []
+            const images = []
             let i = 1
             while (props.data[`resultat${index}_lien_${i}`]) {
                 liens.push(props.data[`resultat${index}_lien_${i}`])
+                images.push(`_resultat${index}_img_${i}`)
                 i++
             }
 
             resultats.push({
                 annee,
                 description: desc,
-                liens
+                liens,
+                images
             })
         }
     }
@@ -51,15 +58,19 @@ const getResultats = () => {
                 </div>
 
                 <div class="apercu">
-                    <div class="row-image">
-                        <a v-if="resultat.liens.length > 0" :href="resultat.liens[0]" target="_blank">
-                            <img src="./assets/recensements/3_resultat1.png" class="resultat-image" />
-                        </a>
+                    <div class="row-images">
+                        <div v-for="(image, i) in resultat.images" :key="i" class="row-image">
+                            <a v-if="resultat.liens[i]" :href="resultat.liens[i]" target="_blank">
+                                <img :src="`src/assets/recensements/${props.index}${image}.jpg`" class="resultat-image"
+                                    alt="Aperçu du recensement" />
+                            </a>
+                        </div>
                     </div>
                     <div class="row-liens">
                         <div v-for="(lien, i) in resultat.liens" :key="i" class="lien-item">
-                            <a :href="lien" target="_blank" rel="noopener noreferrer" class="internal-link">Voir <img
-                                    src="./assets/external-link.svg" alt=""></a>
+                            <a :href="lien" target="_blank" class="internal-link">
+                                Voir <img src="@/assets/external-link.svg" alt="Lien externe">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -90,11 +101,13 @@ const getResultats = () => {
     font-family: DMSans;
     border-radius: 8px;
     overflow: hidden;
+    width: 100%;
+    margin-top: 50px;
 }
 
 .resultats {
     border: 1px solid var(--Border-Neutral-Default, #383D3E);
-    border-radius: 0 0 20px 20px ;
+    border-radius: 0 0 20px 20px;
 }
 
 .table-row {
@@ -133,10 +146,13 @@ a {
     font-weight: bold;
 }
 
+.row-description {
+    white-space: pre-line;
+}
+
 .remarque-section {
     margin-top: 24px;
     display: flex;
-    width: 766px;
     flex-direction: column;
     border-radius: 10px;
     border: 1px solid var(--Border-Neutral-On-Accent, #937C3E);
@@ -148,5 +164,17 @@ a {
     font-weight: 300;
     line-height: 150%;
     padding: 24px;
+}
+
+.resultat-image {
+    width: 312px;
+    border-radius: 10px;
+}
+
+@media (max-width: 1510px) {
+.table-row {
+    flex-direction: column;
+
+}
 }
 </style>

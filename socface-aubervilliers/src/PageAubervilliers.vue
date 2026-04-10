@@ -17,7 +17,6 @@ import texts from './assets/texts.json';
 h1 {
     color: var(--Text-Default-Accent, #B5994F);
     text-align: center;
-    font-size: var(--Text-Sizes-H1, 72px);
     font-style: normal;
     font-weight: 500;
     line-height: 120%;

@@ -5,36 +5,46 @@ import ResultatsTableau from './ResultatsTableau.vue';
 
 <template>
     <div class="content-wrapper">
-        <div class="carte-postale">
+        <div v-for="(carte, index) in cartePostaleData" :key="index" class="carte-postale" :id="'habitant-'+index">
             <div class="carte-postale-header">
-                <h2>{{ cartePostaleData[0].titre }}</h2>
-                <p class="adresse">{{ cartePostaleData[0].adresse }}</p>
-                <p class="description">{{ cartePostaleData[0].description }}</p>
+                <h2>{{ carte.titre }}</h2>
+                <p class="adresse">{{ carte.adresse }}</p>
+                <p class="description">{{ carte.description }}</p>
             </div>
             <div class="carte-postale-content">
                 <div class="carte-postale-iconographie">
                     <div class="icono-sticky">
-                        <img :src="`src/assets/cp/${cartePostaleData[0].cp1_code}.jpg`" alt=""><br>
-                        {{ cartePostaleData[0].cp1_code }} -
-                        {{ cartePostaleData[0].cp1_desc }}
+                        <img :src="`src/assets/cp/${carte.cp1_code}.jpg`" alt=""><br>
+                        {{ carte.cp1_code }} - {{ carte.cp1_desc }}
 
-                        <img :src="`src/assets/cp/${cartePostaleData[0].cp2_code}.jpg`" alt=""><br>
-                        {{ cartePostaleData[0].cp2_code }} -
-                        {{ cartePostaleData[0].cp2_desc }}
+                        <div v-if="carte.cp2_code">
+                        <img :src="`src/assets/cp/${carte.cp2_code}.jpg`" alt=""><br>
+                        {{ carte.cp2_code }} - {{ carte.cp2_desc }}</div>
                     </div>
                 </div>
-                <ResultatsTableau :data="cartePostaleData[0]" />
+                <ResultatsTableau :data="carte" :index="index" />
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
+h2 {
+    margin-top: 100px;
+}
+.carte-postale {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
 .content-wrapper {
     padding: 64px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
+
 .adresse {
     color: var(--Text-Default-Accent, #B5994F);
 }
@@ -47,6 +57,7 @@ import ResultatsTableau from './ResultatsTableau.vue';
 
 .carte-postale-iconographie {
     max-width: 476px;
+    
 }
 
 .carte-postale-iconographie img {
@@ -57,6 +68,7 @@ import ResultatsTableau from './ResultatsTableau.vue';
 .icono-sticky {
     position: sticky;
     top: 100px;
+    
 }
 
 @media (max-width: 1510px) {
@@ -65,6 +77,5 @@ import ResultatsTableau from './ResultatsTableau.vue';
         flex-direction: column;
         gap: 70px;
     }
-
 }
 </style>

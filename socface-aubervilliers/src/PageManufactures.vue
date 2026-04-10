@@ -4,7 +4,10 @@
 
 
 <template>
-    Page Manufactures
+    <div class="content">
+        <h2>Les Manufactures</h2>
+        <p class="paragraphe">Page à venir</p>
+    </div>
 </template>
 
 

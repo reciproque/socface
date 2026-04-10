@@ -1,7 +1,44 @@
 [
+
+  {
+    "titre": "Le commerce de Georges Boucherot",
+    "adresse": "98 avenue Victor Hugo",
+    "description": "Méthode de recherche : par nom et prénom dans les recensements",
+    "cp1_code": "4FI0597",
+    "cp1_desc": "G. Boucherot, commerce de vins et restaurant - 98 avenue Victor Hugo",
+    "resultat1_annee": 1911,
+    "resultat1_desc": "Georges Boucherot, né à Beauvais en 1873, patron et marchand de vins",
+    "resultat1_lien_1": "https://arkindex.socface.teklia.com/element/2328d4c1-e934-4121-9db2-de591d5d324a",
+    "remarque": "Dans le recensement de 1911, le ménage dont Georges Boucherot est le chef comprend Céline, son épouse, ainsi qu’une cuisinière, Blanche Boucherot (sans lien manifeste avec Georges). La composition de ce foyer ne correspond toutefois pas aux individus visibles sur la photographie. En supposant que les personnes situées à l’extrême gauche soient de simples passants, la famille au centre de l’image inclut quatre enfants en bas âge absents du recensement. Il demeure néanmoins probable qu’il s’agisse de ce ménage, les jeunes enfants pouvant ne pas être mentionnés lors des opérations de recensement, par exemple s’ils vivent temporairement en dehors du domicile familial."
+  },
+  
+  {
+    "titre": "À la recherche des commerçants de vins du boulevard Félix Faure",
+    "adresse": "Boulevard Félix Faure",
+    "description": "Méthode de recherche : recherche par profession, les marchands de vins ou cafetiers du boulevard Félix Faure dans le recensement de 1936",
+    "cp1_code": "4FI0274",
+    "cp1_desc": "Boulevard Félix Faure - Commerce de Vins – Restaurant",
+    "resultat1_annee": 1936,
+    "resultat1_desc": "- Ricardo Harrola (espagnol) et son épouse, Angèle (française), tous deux nés en 1905 et marchands de vins au 72 boulevard Félix Faure\n\n- Alphonse Legendre et son épouse Eugénie, nés respectivement en 1872 et 1875 et tous deux marchands de vin au 110 boulevard Félix Faure",
+    "resultat1_lien_1": "https://arkindex.socface.teklia.com/element/69975115-9a3a-42bf-a34b-10b70267af79",
+    "resultat1_lien_2": "https://arkindex.socface.teklia.com/element/733e8530-123e-4187-8d61-fba0e9193335",
+    "remarque": "Ces deux couples pourraient correspondre aux personnes situées au centre de la photographie. Quant à l’enfant visible au milieu, il ne figure pas dans le recensement. La présence d’autres individus de part et d’autre du groupe, séparés par un certain espace, semblerait indiquer qu’ils n’appartiennent pas au même noyau familial."
+  },
+  {
+    "titre": "Une épicière de la chaîne Primistère ?",
+    "adresse": "",
+    "description": "Méthode de recherche : recherche du terme \"primistère\" dans les recensements",
+    "cp1_code": "4FI0268",
+    "cp1_desc": "Primistère Parisien - vins – épicerie",
+    "resultat1_annee": 1931,
+    "resultat1_desc": "Fernande Desmet, née en 1884, gérante d'une épicerie Primistère",
+    "resultat1_lien_1": "https://arkindex.socface.teklia.com/element/f9619765-923b-4d2e-8a2d-95bb17d8f469",
+    "remarque": "Fernande Desmet est mariée à Noël Desmet, tisserand à Paris.\nPrimistère, une chaîne d’épiceries, fusionne en 1971 avec les établissements Félix Potin, fondés par Félix Potin au milieu du XIXe siècle (https://fr.wikipedia.org/wiki/F%C3%A9lix_Potin). Faute d’informations précises sur la localisation de l’épicerie, il demeure difficile d’affirmer que la gérante mentionnée corresponde à celle relevée dans les recensements."
+  },
+  
   {
     "titre": "Le cycliste Henri Thomas",
-    "adresse": "Adresse",
+    "adresse": "",
     "description": "Méthode de recherche : par nom et prénom dans les recensements",
     "cp1_code": "4FI0331",
     "cp1_desc": "Nos amateurs : Henri Thomas (C.R.S. 4-Chemins)",
@@ -20,7 +57,69 @@
     "resultat4_annee": 1931,
     "resultat4_desc": "Henri Thomas, né en 1902 dans la Nièvre, représentant, demeurant rue de la Motte dans le ménage de ses parents",
     "resultat4_lien_1": "https://arkindex.socface.teklia.com/element/7a56b699-a89f-4101-9208-fe97dc922872",
-    "remarque": "Sur la seconde carte postale, Henri Thomas apparaît au premier plan, troisième en partant de la gauche. \n\nDeux homonymes sont recensés : un premier Henri Thomas, né dans la Nièvre en 1902, et un second, né en 1906. En l’absence d’informations complémentaires permettant d’identifier avec certitude le cycliste, ces deux individus sont des correspondances possibles. On peut également signaler l’existence d'une page Wikipédia présentant Henri Thomas, né en 1905, qui participa au Tour de France de 1928.\n\nSi l’on retient l’hypothèse d’un Henri Thomas né en 1902, il aurait par la suite abandonné le cyclisme pour devenir représentant, profession qui lui est attribuée dans le recensement de 1931.",
+    "remarque": "Sur la seconde carte postale, Henri Thomas apparaît au premier plan, troisième en partant de la gauche. \n\nDeux homonymes sont recensés : un premier Henri Thomas, né dans la Nièvre en 1902, et un second, né en 1906. En l’absence d’informations complémentaires permettant d’identifier avec certitude le cycliste, ces deux individus sont des correspondances possibles. On peut également signaler l’existence d'une page Wikipédia présentant Henri Thomas, né en 1905, qui participa au Tour de France de 1928.\n\nSi l’on retient l’hypothèse d’un Henri Thomas né en 1902, il aurait par la suite abandonné le cyclisme pour devenir représentant, profession qui lui est attribuée dans le recensement de 1931. https://en.wikipedia.org/wiki/Henri_Thomas_(cyclist)",
     "": "https://en.wikipedia.org/wiki/Henri_Thomas_(cyclist)"
+  },
+  {
+    "titre": "L’accordéoniste Joseph Rossi",
+    "adresse": "8 chemin du Halage",
+    "description": "Méthode de recherche : par nom et prénom dans les recensements",
+    "cp1_code": "4FI0318",
+    "cp1_desc": "Joseph Rossi, la jeune vedette de l’accordéon. Aubervilliers - 8, chemin du Halage",
+    "resultat1_annee": 1931,
+    "resultat1_desc": "Joseph Rossi, né en 1922, demeurant au 8 chemin du Halage, fils de Giovanni Rossi, décapeur et d'Ernesta Rossi",
+    "resultat1_lien_1": "https://arkindex.socface.teklia.com/element/45476e1d-4e77-4718-9fe2-67eaa4690a8e",
+    "remarque": "Joseph Rossi a connu une carrière notable d’accordéoniste, comme en témoigne sa page Wikipédia sous le nom de Joë Rossi (https://fr.wikipedia.org/wiki/Jo%C3%AB_Rossi). Sa date de naissance correspond à celle relevée dans les recensements. Sa biographie indique que ses parents tenaient un bistrot où un accordéoniste se produisait chaque année, ce qui aurait suscité sa vocation. Toutefois, dans le recensement de 1931, son père est mentionné comme décapeur et non comme tenancier de bistrot. La famille demeure introuvable dans le recensement de 1936, que ce soit en recherchant par le nom ou par l’adresse, ce qui pourrait s’expliquer par un déménagement.\n\nUn enregistrement audio de l’accordéoniste est par ailleurs accessible sur Gallica (https://gallica.bnf.fr/ark:/12148/bpt6k8819173v)",
+    "": "https://fr.wikipedia.org/wiki/Jo%C3%AB_Rossi",
+    "__1": "https://gallica.bnf.fr/ark:/12148/bpt6k8819173v"
+  },
+  
+  {
+    "titre": "Dans le jardin d’Henri Pitard",
+    "adresse": "38 rue du Fort",
+    "description": "Méthode de recherche : par nom, prénom et adresse dans les recensements",
+    "cp1_code": "4FI0326",
+    "cp1_desc": "Photo souvenir du 30 juin 1912, chez Henri Pitard, 38 rue du Fort, Aubervilliers",
+    "cp2_code": "4FI0325",
+    "cp2_desc": "Photographie prise dans le jardin d’Henri Pitard, 38 rue du Fort, le 4 octobre 1910",
+    "resultat1_annee": 1911,
+    "resultat1_desc": "Au 38 rue du Fort : Abel Pitard, né en 1884 au Planquay, doreur et son épouse, Marguerite, née en 1884, coucheuse",
+    "resultat1_lien_1": "https://arkindex.socface.teklia.com/element/6eb295d9-0bde-43ce-9574-6e869200a194",
+    "remarque": "Aucun Henri Pitard n’a pu être identifié dans les recensements. À la même adresse, deux individus portant le nom de Pitard ont toutefois été relevés, probablement des membres de sa famille."
+  },
+  {
+    "titre": "La famille Regnard",
+    "adresse": "rue Baudin",
+    "description": "Méthode de recherche : par nom, prénom et adresse dans les recensements",
+    "cp1_code": "4FI0655",
+    "cp1_desc": "Famille et amis d’Henri Regnard, rue Baudin. La rue Baudin a été supprimée avec la rénovation de la Villette",
+    "resultat1_annee": 1911,
+    "resultat1_desc": "Henri Regnard, né en 1876, chauffeur, demeurant au 13 rue Baudin avec son épouse, Ernestine, née en 1879 ainsi que leurs trois enfants : Henri, Émile et Juliette, nés entre 1898 et 1904",
+    "resultat1_lien_1": "https://arkindex.socface.teklia.com/element/1654b6c6-4c4c-46fa-b12e-f2707b688f9b",
+    "resultat2_annee": 1926,
+    "resultat2_desc": "Henri Regnard, né en 1876, contremaître, demeurant au 21 rue de la Nouvelle France avec son épouse, Ernestine, née en 1879 ainsi que leur dernière enfant, Lucienne, née en 1922",
+    "resultat2_lien_1": "https://arkindex.socface.teklia.com/element/246547d4-6bf2-4f87-8a47-a042455d3398",
+    "resultat3_annee": 1931,
+    "resultat3_desc": "Henri Regnard, né en 1876, journalier, demeurant au 21 rue de la Nouvelle France avec son épouse, Ernestine, née en 1879 et leur dernière fille, Lucienne",
+    "resultat3_lien_1": "https://arkindex.socface.teklia.com/element/334984ed-b005-4589-80f9-72693e49aa87",
+    "remarque": "La photographie correspond à la période durant laquelle le ménage résidait rue Baudin ; on peut donc supposer qu’elle a été prise avant 1926. Par ailleurs, si l’on considère que l’ensemble des enfants y est représenté, y compris Lucienne, née en 1922, il est possible de resserrer la datation et de situer la prise de vue entre 1922 et 1926.\n\nLes recensements mentionnent quatre enfants : Henri, né en 1898, Émile, né en 1902, Juliette, née en 1904, et enfin Lucienne, née en 1922. Au regard de leurs tailles respectives sur la photographie, il est possible d’en déduire que l’aînée est l'enfant qui n'apparaît pas dans les recensements (peut-être était-elle déjà partie du foyer en 1911)."
+  },
+  {
+    "titre": "La maison de Jules Letords",
+    "adresse": "225 route de Flandre, chemin du Montfort",
+    "description": "Méthode de recherche : par nom, prénom et adresse dans les recensements",
+    "cp1_code": "4FI0373",
+    "cp1_desc": "Maison de Jules Letords, 225 route de Flandre, chemin du Montfort, Aubervilliers",
+    "resultat1_annee": 1921,
+    "resultat1_desc": "Jules Letords, né en 1869 à Vincelles (Yonne), chef de famille, demeurant rue de Montfort avec son fils, Raymond, né en 1902 à Paris",
+    "resultat1_lien_1": "https://arkindex.socface.teklia.com/element/a11fbd69-b620-4b0c-b100-bcfc8157e043",
+    "resultat2_annee": 1926,
+    "resultat2_desc": "Jules Letords, né en 1869 dans l'Yonne, chef de famille, journalier, demeurant rue de Montfort avec son fils, Raymond, né en 1902 à Paris, boulanger ainsi qu'une amie, Gilberte Ligé, née en 1898 et mécanicienne",
+    "resultat2_lien_1": "https://arkindex.socface.teklia.com/element/3a0818d6-00c2-4145-8da7-0f6da5a695c6",
+    "resultat3_annee": 1931,
+    "resultat3_desc": "Jules Letords, né en 1869 dans l'Yonne, électricien réside dans le ménage de son fils, Raymond né en 1902, chef de famille, ouvrier boulanger, marié à Marceline Letords, née en 1904 dans la Creuse et parent de Raymond Letords, né en 1929",
+    "resultat3_lien_1": "https://arkindex.socface.teklia.com/element/fe79130e-0559-45cc-8d0c-ad70334c3da8",
+    "remarque": "La photographie semble dater des années 1930 et représenterait Jules Letords ainsi que la famille de son fils, Raymond, sur le perron de la maison familiale. Il est intéressant de noter la transmission progressive de la position de chef de famille, du père au fils, au cours de la période couverte par les recensements."
   }
+
 ]

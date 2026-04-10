@@ -53,7 +53,7 @@ const rebonds = [
     name: texts.rebond_6.Texte,
     image: "src/assets/rebond/socface-aubervilliers-rebond-3.jpg",
     description: texts.rebond_7.Texte,
-    lien: "/bati"
+    lien: "/manufactures"
   }
 ]
 
