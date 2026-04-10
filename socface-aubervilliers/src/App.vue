@@ -38,21 +38,21 @@ const rebonds = [
   {
     path: '/habitants',
     name: texts.rebond_2.Texte,
-    image: "src/assets/rebond/socface-aubervilliers-rebond-1.jpg",
+    image: rebond1,
     description: texts.rebond_3.Texte,
     lien: "/habitants"
   },
   {
     path: '/bati',
     name: texts.rebond_4.Texte,
-    image: "src/assets/rebond/socface-aubervilliers-rebond-2.jpg",
+    image: rebond2,
     description: texts.rebond_5.Texte,
     lien: "/bati"
   },
   {
     path: '/manufactures',
     name: texts.rebond_6.Texte,
-    image: "src/assets/rebond/socface-aubervilliers-rebond-3.jpg",
+    image: rebond3,
     description: texts.rebond_7.Texte,
     lien: "/manufactures"
   }
