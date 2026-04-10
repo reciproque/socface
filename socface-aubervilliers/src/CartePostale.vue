@@ -1,6 +1,14 @@
+vue
+Copier
+
 <script setup>
 import cartePostaleData from './assets/cartespostales.json';
 import ResultatsTableau from './ResultatsTableau.vue';
+
+// Fonction pour obtenir l'URL d'une image
+const getImageUrl = (imageName) => {
+  return new URL(`./assets/cp/${imageName}.jpg`, import.meta.url).href;
+};
 </script>
 
 <template>
@@ -14,12 +22,13 @@ import ResultatsTableau from './ResultatsTableau.vue';
             <div class="carte-postale-content">
                 <div class="carte-postale-iconographie">
                     <div class="icono-sticky">
-                        <img :src="`src/assets/cp/${carte.cp1_code}.jpg`" alt=""><br>
+                        <img :src="getImageUrl(carte.cp1_code)" alt=""><br>
                         {{ carte.cp1_code }} - {{ carte.cp1_desc }}
 
                         <div v-if="carte.cp2_code">
-                        <img :src="`src/assets/cp/${carte.cp2_code}.jpg`" alt=""><br>
-                        {{ carte.cp2_code }} - {{ carte.cp2_desc }}</div>
+                            <img :src="getImageUrl(carte.cp2_code)" alt=""><br>
+                            {{ carte.cp2_code }} - {{ carte.cp2_desc }}
+                        </div>
                     </div>
                 </div>
                 <ResultatsTableau :data="carte" :index="index" />
@@ -27,6 +36,10 @@ import ResultatsTableau from './ResultatsTableau.vue';
         </div>
     </div>
 </template>
+
+
+
+
 
 <style scoped>
 h2 {

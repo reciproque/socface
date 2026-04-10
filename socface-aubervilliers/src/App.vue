@@ -1,23 +1,24 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
-
 import texts from './assets/texts.json'
 
 import NavBar from './NavBar.vue'
-
 import Home from './Home.vue'
 import PageAubervilliers from './PageAubervilliers.vue'
 import PageHabitants from './PageHabitants.vue'
 import PageBati from './PageBati.vue'
 import PageManufactures from './PageManufactures.vue'
-
 import SiteFooter from './SiteFooter.vue'
 import Rebond from './Rebond.vue'
 
+import rebond1 from './assets/rebond/socface-aubervilliers-rebond-1.jpg'
+import rebond2 from './assets/rebond/socface-aubervilliers-rebond-2.jpg'
+import rebond3 from './assets/rebond/socface-aubervilliers-rebond-3.jpg'
+
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-} 
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
+}
 
 const routes = {
   '/': Home,

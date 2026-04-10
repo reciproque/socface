@@ -1,4 +1,5 @@
 <script setup>
+import { ref, computed } from 'vue';
 
 const props = defineProps({
     data: {
@@ -11,23 +12,27 @@ const props = defineProps({
     }
 })
 
+const getImageUrl = (imageName) => {
+    return new URL(`./assets/recensements/${props.index}${imageName}.jpg`, import.meta.url).href;
+};
+
 const getResultats = () => {
-    const resultats = []
+    const resultats = [];
 
     for (const key in props.data) {
         if (key.startsWith('resultat') && key.endsWith('_annee')) {
-            const index = key.replace('resultat', '').replace('_annee', '')
-            const annee = props.data[key]
-            const descKey = `resultat${index}_desc`
-            const desc = props.data[descKey]
+            const index = key.replace('resultat', '').replace('_annee', '');
+            const annee = props.data[key];
+            const descKey = `resultat${index}_desc`;
+            const desc = props.data[descKey];
 
-            const liens = []
-            const images = []
-            let i = 1
+            const liens = [];
+            const images = [];
+            let i = 1;
             while (props.data[`resultat${index}_lien_${i}`]) {
-                liens.push(props.data[`resultat${index}_lien_${i}`])
-                images.push(`_resultat${index}_img_${i}`)
-                i++
+                liens.push(props.data[`resultat${index}_lien_${i}`]);
+                images.push(`_resultat${index}_img_${i}`);
+                i++;
             }
 
             resultats.push({
@@ -35,23 +40,21 @@ const getResultats = () => {
                 description: desc,
                 liens,
                 images
-            })
+            });
         }
     }
     return resultats;
-}
+};
 </script>
 
 <template>
     <div class="resultat-tableau">
-
         <div class="tableau-header">
             <div>Recensements</div>
             <div>Aperçu</div>
         </div>
         <div class="resultats">
             <div v-for="(resultat, index) in getResultats()" :key="index" class="table-row">
-
                 <div class="recensements">
                     <div class="row-annee">{{ resultat.annee }}</div>
                     <div class="row-description">{{ resultat.description }}</div>
@@ -61,20 +64,18 @@ const getResultats = () => {
                     <div class="row-images">
                         <div v-for="(image, i) in resultat.images" :key="i" class="row-image">
                             <a v-if="resultat.liens[i]" :href="resultat.liens[i]" target="_blank">
-                                <img :src="`src/assets/recensements/${props.index}${image}.jpg`" class="resultat-image"
-                                    alt="Aperçu du recensement" />
+                                <img :src="getImageUrl(image)" class="resultat-image" alt="Aperçu du recensement" />
                             </a>
                         </div>
                     </div>
                     <div class="row-liens">
                         <div v-for="(lien, i) in resultat.liens" :key="i" class="lien-item">
                             <a :href="lien" target="_blank" class="internal-link">
-                                Voir <img src="@/assets/external-link.svg" alt="Lien externe">
+                                Voir <img src="./assets/external-link.svg" alt="Lien externe">
                             </a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 

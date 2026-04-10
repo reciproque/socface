@@ -34,7 +34,7 @@ onUnmounted(() => {
 <template>
     <header>
         <a href="/" @click.prevent="navigate('/'); menuOpen = false">
-            <img src="../logo.svg" alt="" class="logo">
+            <img src="./assets/logo.svg" alt="" class="logo">
         </a>
         <nav>
             <div class="label">Les terrains d'études :</div>

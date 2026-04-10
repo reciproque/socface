@@ -1,13 +1,12 @@
 <script setup>
+import { ref } from 'vue';
 import CartePostale from './CartePostale.vue';
-
 import texts from './assets/texts.json';
+import cartesPostalesdata from './assets/cartespostales.json';
 
-import cartesPostalesdata from './assets/cartespostales.json'
+import carteImage from './assets/socface-aubervilliers-fond-carte.jpg';
 
-import { ref } from 'vue'
-
-const showAddress = ref('')
+const showAddress = ref('');
 
 const pois = [
     {
@@ -15,23 +14,24 @@ const pois = [
         left: '30%',
         address: cartesPostalesdata[0].adresse,
         link: cartesPostalesdata[0].titre,
+        index: 0,
     },
     {
         top: '75%',
         left: '20%',
         address: cartesPostalesdata[1].adresse,
         link: cartesPostalesdata[1].titre,
+        index: 1,
     },
     {
         top: '40%',
         left: '96%',
         address: cartesPostalesdata[5].adresse,
         link: cartesPostalesdata[5].titre,
+        index: 5,
     }
-]
-
+];
 </script>
-
 
 <template>
     <div class="hero">
@@ -39,16 +39,14 @@ const pois = [
             <h1>{{ texts.habitants_1.Texte }}</h1>
             <p class="paragraphe">{{ texts.habitants_2.Texte }}</p>
             <h3>Sommaire</h3>
-            <div v-for="(carte, index) in cartesPostalesdata" :key="index" class="carte-postale" :id="index">
+            <div v-for="(carte, index) in cartesPostalesdata" :key="index" class="carte-postale" :id="'habitant-' + index">
                 <a :href="'#habitant-' + index">{{ carte.titre }}</a>
             </div>
-
-
         </div>
 
         <div class="sommaire-carte-container">
             <div class="sommaire-carte">
-                <img src="./assets/socface-aubervilliers-fond-carte.jpg" alt="Carte d'Aubervilliers" />
+                <img :src="carteImage" alt="Carte d'Aubervilliers" />
             </div>
 
             <div class="poi-container">
@@ -58,21 +56,17 @@ const pois = [
                     <div class="poi-dot"></div>
                     <div v-if="showAddress === poi.address" class="poi-tooltip">
                         {{ poi.address }} <br>
-                        <a :href="'#habitant-' + index">{{ poi.link }}</a>
+                        <a :href="'#habitant-' + poi.index">{{ poi.link }}</a>
                     </div>
                 </div>
             </div>
-
         </div>
-
     </div>
 
     <hr>
 
     <CartePostale />
-
 </template>
-
 
 <style scoped>
 a {
@@ -85,7 +79,6 @@ h1 {
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
-
 }
 
 .hero {
@@ -93,8 +86,6 @@ h1 {
     gap: 80px;
     padding: 112px 64px;
     justify-content: center;
-
-
 }
 
 .hero-text {
@@ -112,14 +103,12 @@ h1 {
     border-radius: 20px;
     align-self: stretch;
     display: block;
-
 }
 
 .sommaire-carte-container {
     position: relative;
     width: 500px;
     height: 377px;
-
 }
 
 .poi-container {

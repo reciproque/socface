@@ -1,20 +1,30 @@
 <script setup>
-
 import { ref, computed } from 'vue';
 import texts from './assets/texts.json';
 
+// Importez les images dynamiquement
+import cp1 from './assets/cp/4FI0268.jpg';
+import cp2 from './assets/cp/4FI0274.jpg';
+import cp3 from './assets/cp/4FI0318.jpg';
+import cp4 from './assets/cp/4FI0325.jpg';
+import cp5 from './assets/cp/4FI0326.jpg';
+import cp6 from './assets/cp/4FI0331.jpg';
+import cp7 from './assets/cp/4FI0373.jpg';
+import cp8 from './assets/cp/4FI0522.jpg';
+import cp9 from './assets/cp/4FI0597.jpg';
+import cp10 from './assets/cp/4FI0655.jpg';
 
 const images = ref([
-    { url: "/src/assets/cp/4FI0268.jpg", alt: "Carte postale illustrative des archives d'Aubervilliers" },
-    { url: "/src/assets/cp/4FI0274.jpg", alt: "Carte postale illustrative des archives d'Aubervilliers" },
-    { url: "/src/assets/cp/4FI0318.jpg", alt: "Carte postale illustrative des archives d'Aubervilliers" },
-    { url: "/src/assets/cp/4FI0325.jpg", alt: "Carte postale illustrative des archives d'Aubervilliers" },
-    { url: "/src/assets/cp/4FI0326.jpg", alt: "Carte postale illustrative des archives d'Aubervilliers" },
-    { url: "/src/assets/cp/4FI0331.jpg", alt: "Carte postale illustrative des archives d'Aubervilliers" },
-    { url: "/src/assets/cp/4FI0373.jpg", alt: "Carte postale illustrative des archives d'Aubervilliers" },
-    { url: "/src/assets/cp/4FI0522.jpg", alt: "Carte postale illustrative des archives d'Aubervilliers" },
-    { url: "/src/assets/cp/4FI0597.jpg", alt: "Carte postale illustrative des archives d'Aubervilliers" },
-    { url: "/src/assets/cp/4FI0655.jpg", alt: "Carte postale illustrative des archives d'Aubervilliers" },
+    { url: cp1, alt: "Carte postale illustrative des archives d'Aubervilliers" },
+    { url: cp2, alt: "Carte postale illustrative des archives d'Aubervilliers" },
+    { url: cp3, alt: "Carte postale illustrative des archives d'Aubervilliers" },
+    { url: cp4, alt: "Carte postale illustrative des archives d'Aubervilliers" },
+    { url: cp5, alt: "Carte postale illustrative des archives d'Aubervilliers" },
+    { url: cp6, alt: "Carte postale illustrative des archives d'Aubervilliers" },
+    { url: cp7, alt: "Carte postale illustrative des archives d'Aubervilliers" },
+    { url: cp8, alt: "Carte postale illustrative des archives d'Aubervilliers" },
+    { url: cp9, alt: "Carte postale illustrative des archives d'Aubervilliers" },
+    { url: cp10, alt: "Carte postale illustrative des archives d'Aubervilliers" },
 ]);
 
 const firstLineImages = computed(() => {

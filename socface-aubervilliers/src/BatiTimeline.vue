@@ -9,12 +9,12 @@
                 <h3>{{ item.date }}</h3>
                 <div v-if="item.desc_1" class="timeline-entry">
                     <p>{{ item.desc_1 }} 
-                    <a v-if="item.lien_1" :href="item.lien_1" target="_blank">Voir <img src="@/assets/external-link.svg"
+                    <a v-if="item.lien_1" :href="item.lien_1" target="_blank">Voir <img src="./assets/external-link.svg"
                             alt="Lien externe"></a></p>
                 </div>
                 <div v-if="item.desc_2" class="timeline-entry">
                     <p>{{ item.desc_2 }} 
-                    <a v-if="item.lien_2" :href="item.lien_2" target="_blank">Voir <img src="@/assets/external-link.svg"
+                    <a v-if="item.lien_2" :href="item.lien_2" target="_blank">Voir <img src="./assets/external-link.svg"
                             alt="Lien externe"></a></p>
                 </div>
             </div>
