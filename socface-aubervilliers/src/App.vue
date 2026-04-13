@@ -15,11 +15,14 @@ import rebond1 from './assets/rebond/socface-aubervilliers-rebond-1.jpg'
 import rebond2 from './assets/rebond/socface-aubervilliers-rebond-2.jpg'
 import rebond3 from './assets/rebond/socface-aubervilliers-rebond-3.jpg'
 
+
+// Retour en haut de page à chaque changement de page
 function topFunction() {
   document.body.scrollTop = 0
   document.documentElement.scrollTop = 0
 }
 
+// Liste des URL pour routing et rebonds en bas de page
 const routes = {
   '/': Home,
   '/aubervilliers': PageAubervilliers,

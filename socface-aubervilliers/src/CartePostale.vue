@@ -5,7 +5,6 @@ Copier
 import cartePostaleData from './assets/cartespostales.json';
 import ResultatsTableau from './ResultatsTableau.vue';
 
-// Fonction pour obtenir l'URL d'une image
 const getImageUrl = (imageName) => {
   return new URL(`./assets/cp/${imageName}.jpg`, import.meta.url).href;
 };

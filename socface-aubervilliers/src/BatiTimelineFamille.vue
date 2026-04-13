@@ -35,12 +35,12 @@ export default {
             timelineData: data,
             highlightedPOI: null,
             poiCoordinates: {
-                "Courcelles": { x: 30, y: 50 },
-                "Chevroches": { x: 60, y: 70 },
-                "Alençon": { x: 40, y: 30 },
-                "Maison Alfort": { x: 80, y: 60 },
-                "Saint-Leu d’Esserent": { x: 50, y: 80 },
-                "Aubervilliers": { x: 70, y: 40 },
+                "Courcelles": { x: 84, y: 44 },
+                "Chevroches": { x: 62, y: 44 },
+                "Alençon": { x: 39, y: 33 },
+                "Maison Alfort": { x: 55, y: 30 },
+                "Saint-Leu d’Esserent": { x: 54, y: 24 },
+                "Aubervilliers": { x: 54, y: 26 },
             },
         };
     },
@@ -112,9 +112,9 @@ export default {
 
 .poi {
     position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: red;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
@@ -122,8 +122,9 @@ export default {
 
 .poi-highlighted {
     background-color: #CC6F5B;
-    width: 16px;
-    height: 16px;
+    width: 25px;
+    height: 25px;
+    z-index: 10;
     box-shadow: 0 0 8px 4px #CC6F5B
 }
 

@@ -2,7 +2,6 @@
 import { ref, computed } from 'vue';
 import texts from './assets/texts.json';
 
-// Importez les images dynamiquement
 import cp1 from './assets/cp/4FI0268.jpg';
 import cp2 from './assets/cp/4FI0274.jpg';
 import cp3 from './assets/cp/4FI0318.jpg';

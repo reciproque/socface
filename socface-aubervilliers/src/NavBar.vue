@@ -8,6 +8,7 @@ const navigate = (path) => {
     window.dispatchEvent(new Event('route-change'))
 }
 
+// Gestion du menu des liens
 const menuOpen = ref(false);
 
 const closeMenu = () => {

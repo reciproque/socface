@@ -2,7 +2,6 @@
 import texts from './assets/texts.json';
 </script>
 
-
 <template>
     <div class="content">
     <h1>{{ texts.aubervilliers_1.Texte }}</h1>
