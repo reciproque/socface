@@ -82,15 +82,14 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--primaires-noir-10);
-}
-
-.logo {
     padding: 12px 32px;
+    gap: 10px;
+
+
 }
 
 nav {
     position: relative;
-    padding: 12px 64px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -143,7 +142,7 @@ ul:hover {
     font-size: var(--Text-Sizes-Body-Small, 14px);
 }
 
-@media (max-width: 1510px) {
+@media (max-width: 900px) {
     .label {
         display: none;
     }

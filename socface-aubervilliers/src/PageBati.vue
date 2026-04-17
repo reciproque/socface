@@ -142,7 +142,6 @@ h1 {
 .chiffres {
     display: flex;
     flex-direction: row;
-    padding: 112px 64px;
     gap: 80px;
 
 }

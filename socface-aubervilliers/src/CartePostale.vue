@@ -12,7 +12,7 @@ const getImageUrl = (imageName) => {
 
 <template>
     <div class="content-wrapper">
-        <div v-for="(carte, index) in cartePostaleData" :key="index" class="carte-postale" :id="'habitant-'+index">
+        <div v-for="(carte, index) in cartePostaleData" :key="index" class="carte-postale"  :id="'habitant-' + index" >
             <div class="carte-postale-header">
                 <h2>{{ carte.titre }}</h2>
                 <p class="adresse">{{ carte.adresse }}</p>
@@ -88,6 +88,9 @@ h2 {
         display: flex;
         flex-direction: column;
         gap: 70px;
+        max-width: calc(100vw - 48px);
     }
+
+
 }
 </style>

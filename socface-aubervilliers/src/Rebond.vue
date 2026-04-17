@@ -69,7 +69,6 @@ defineProps({
 }
 
 .rebond-lien {
-    color: white;
     text-decoration: none;
     border-radius: 4px;
     position: relative;

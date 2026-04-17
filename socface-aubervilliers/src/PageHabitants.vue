@@ -10,7 +10,7 @@ const showAddress = ref('');
 
 const pois = [
     {
-        top: '100%',
+        top: '98%',
         left: '30%',
         address: cartesPostalesdata[0].adresse,
         link: cartesPostalesdata[0].titre,
@@ -24,11 +24,18 @@ const pois = [
         index: 1,
     },
     {
-        top: '40%',
-        left: '96%',
+        top: '30%',
+        left: '54%',
         address: cartesPostalesdata[5].adresse,
         link: cartesPostalesdata[5].titre,
         index: 5,
+    },
+        {
+        top: '98%',
+        left: '98%',
+        address: cartesPostalesdata[7].adresse,
+        link: cartesPostalesdata[7].titre,
+        index: 7,
     }
 ];
 </script>
@@ -39,7 +46,7 @@ const pois = [
             <h1>{{ texts.habitants_1.Texte }}</h1>
             <p class="paragraphe">{{ texts.habitants_2.Texte }}</p>
             <h3>Sommaire</h3>
-            <div v-for="(carte, index) in cartesPostalesdata" :key="index" class="carte-postale" :id="'habitant-' + index">
+            <div v-for="(carte, index) in cartesPostalesdata" :key="index" class="carte-postale">
                 <a :href="'#habitant-' + index">{{ carte.titre }}</a>
             </div>
         </div>

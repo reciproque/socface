@@ -55,6 +55,7 @@ const secondLineImages = computed(() => {
     </div>
     <div class="content">
         <p class="paragraphe">{{ texts.home_2.Texte }}</p>
+
         <h2>{{ texts.home_3.Texte }}</h2>
         <p class="paragraphe">{{ texts.home_4.Texte }}</p>
         <a href="/aubervilliers" class="internal-link">{{ texts.home_5.Texte }} <img src="./assets/arrow.svg"
@@ -65,7 +66,6 @@ const secondLineImages = computed(() => {
 
 <style scoped>
 .gallery-container {
-    width: 200%;
     overflow-x: hidden;
 }
 
@@ -120,7 +120,12 @@ h1 {
 @media (max-width: 1510px) {
     h1 {
         font-size: 40px;
+    }
+}
 
+@media (max-width: 900px) {
+    h1 {
+        font-size: 30px;
     }
 }
 </style>

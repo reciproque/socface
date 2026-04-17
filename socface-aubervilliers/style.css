@@ -12,91 +12,105 @@
     color: var(--primaires-noir-100);
     background-color: var(--primaires-noir-10);
     font-family: DMSans;
-}
-
-@media(max-width: 1510px){
-    /* :root {} */
-
-h1 {
-    font-size: 50px;
-}
+    scroll-behavior: smooth;
 }
 
 body {
-margin: 0;
-padding: 0;
-overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 a {
-text-decoration: none;
-color: var(--primary-text);
+    text-decoration: none;
+    color: var(--primary-text);
 }
 
+
 .internal-link {
-display: flex;
-align-items: center;
-gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+a:hover {
+    color: #cc6f5b;
 }
 
 p {
-text-align: left;
+    text-align: left;
 }
 
 .paragraphe {
-color: var(--Text-Default-Default, #ECEEEE);
-white-space: pre-line;
-font-family: DMSans;
-font-size: var(--Text-Sizes-Body-Medium, 18px);
-font-style: normal;
-font-weight: 400;
-line-height: 150%;
-margin-bottom: 96px;
+    color: var(--Text-Default-Default, #ECEEEE);
+    white-space: pre-line;
+    font-family: DMSans;
+    font-size: var(--Text-Sizes-Body-Medium, 18px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 96px;
 
 }
 
 .content {
-margin: 0 160px;
-padding: 96px 30vh;
+    margin: 0 160px;
+    padding: 96px 30vh;
 }
 
 h1 {
-font-size: 72px;
+    font-size: 72px;
 }
 
 
 h2 {
-color: var(--Text-Default-Accent, #B5994F);
-font-size: 52px;
-font-style: normal;
-font-weight: 500;
-line-height: 120%;
+    color: var(--Text-Default-Accent, #B5994F);
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
 }
 
 h3 {
-color: var(--Text-Default-Default, #ECEEEE);
-font-size: 28px;
-font-style: normal;
-font-weight: 400;
-line-height: 140%;
+    color: var(--Text-Default-Default, #ECEEEE);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.logos-partners {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.logos-partners img {
+    max-height: 1.8rem;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+
 }
 
 @media(max-width: 1510px) {
-.content {
-    margin: 0 80px;
-    padding: 96px 0;
-}
-h1 {
-    font-size: 45px;
+    .content {
+        margin: 0 40px;
+        padding: 96px 0;
+    }
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
 }
 
-h2 {
-    font-size: 24px;
-}
-}
 
-/* Typography */:root
-{
+/* Typography */
+:root {
     /* Desktop */
     /* number */
     --text-sizes-body-x-small: 0.75rem;

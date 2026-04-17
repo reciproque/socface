@@ -71,10 +71,6 @@ export default {
     align-items: center;
 }
 
-.timeline {
-    width: 600px;
-}
-
 .timeline-item {
     display: flex;
     flex-direction: row;

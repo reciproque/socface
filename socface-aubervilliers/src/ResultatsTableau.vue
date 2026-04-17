@@ -120,7 +120,6 @@ const getResultats = () => {
 }
 
 .recensements {
-    width: 236px;
     padding: 24px;
 }
 
@@ -173,9 +172,16 @@ a {
 }
 
 @media (max-width: 1510px) {
-.table-row {
-    flex-direction: column;
+    .table-row {
+        flex-direction: column;
+    }
 
-}
+    .apercu {
+        flex-direction: column;
+    }
+
+    .resultat-image {
+        width: 240px;
+    }
 }
 </style>
