@@ -93,7 +93,7 @@ pages:
   image: python:3
 
   script:
-    - mv dist public
+    - mv dist/* public
     - find public
 
   only:
