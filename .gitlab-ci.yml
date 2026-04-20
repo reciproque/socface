@@ -1,0 +1,105 @@
+image: node:24-alpine
+stages:
+  - test
+  - build
+  - deploy
+
+# Prevent detached merge request pipelines
+# https://docs.gitlab.com/ee/ci/merge_request_pipelines/
+# Those do not run the environment on_stop jobs when MRs are closed/merged
+# or when branches get deleted, unlike branch pipelines.
+workflow:
+  rules:
+    - if: '$CI_MERGE_REQUEST_ID'
+      when: never
+    - when: always
+
+audit:
+  stage: test
+
+  before_script:
+    - npm ci
+
+  script:
+    - npm audit --parseable
+  allow_failure: true
+
+build:
+  stage: build
+
+  before_script:
+    - npm ci
+
+  artifacts:
+    paths:
+      - dist
+    expire_in: 2 weeks
+
+  script:
+    - npm run build
+
+.surge:
+  stage: deploy
+
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}
+
+  before_script:
+    - npm install -g surge
+
+deploy-surge:
+  extends: .surge
+
+  # Only deploy branches on surge
+  rules:
+    - if: '$CI_COMMIT_BRANCH && $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH'
+      when: on_success
+    - when: never
+
+  environment:
+    url: https://${CI_COMMIT_REF_SLUG}-reciproque.surge.sh
+    on_stop: stop-surge
+
+  needs:
+    - build
+  dependencies:
+    - build
+
+  script:
+    - surge dist ${CI_ENVIRONMENT_URL}
+
+stop-surge:
+  extends: .surge
+
+  # Only deploy branches on surge
+  rules:
+    - if: '$CI_COMMIT_BRANCH && $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH'
+      when: manual
+      allow_failure: true
+    - when: never
+
+  # Do not try to checkout the branch if it was deleted
+  variables:
+    GIT_STRATEGY: none
+
+  environment:
+    action: stop
+
+  script:
+    - surge teardown ${CI_ENVIRONMENT_URL}
+
+pages:
+  stage: deploy
+  image: python:3
+
+  script:
+    - mv dist public
+    - find public
+
+  only:
+    - master
+    - tags
+
+  artifacts:
+    paths:
+      - public
