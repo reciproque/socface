@@ -21,10 +21,10 @@ import texts from './assets/texts.json'
                         alt="Teklia"></a>
                 <a href="https://anr.fr/" target="_blank"><img src="./assets/logos/logo-anr.jpg"
                         alt="Agence Nationale de la Recherche"></a>
-                <a href="https://www.parisschoolofeconomics.eu/"><img src="./assets/logos/logo-pse.jpg"
+                <a href="https://www.parisschoolofeconomics.eu/" target="_blank"><img src="./assets/logos/logo-pse.jpg"
                         alt="Paris School of Economics" target="_blank"></a>
-                <a href="https://francearchives.gouv.fr/"><img src="./assets/logos/logo-fa.png" alt="France Archives"
-                        target="_blank"></a>
+                <a href="https://francearchives.gouv.fr/" target="_blank"><img src="./assets/logos/logo-fa.png" alt="France Archives"
+                        ></a>
             </div>
         </div>
     </div>

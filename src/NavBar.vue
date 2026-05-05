@@ -1,15 +1,15 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-
 import texts from './assets/texts.json'
 
-const navigate = (path) => {
-    window.history.pushState({}, '', path)
-    window.dispatchEvent(new Event('route-change'))
-}
+const emit = defineEmits(['navigate'])
+const menuOpen = ref(false)
 
+const navigate = (path) => {
+  emit('navigate', path)
+  menuOpen.value = false
+}
 // Gestion du menu des liens
-const menuOpen = ref(false);
 
 const closeMenu = () => {
     menuOpen.value = false;
@@ -33,43 +33,43 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <header>
-        <a href="/" @click.prevent="navigate('/'); menuOpen = false">
-            <img src="./assets/logo.svg" alt="" class="logo">
-        </a>
-        <nav>
-            <div class="label">Les terrains d'études :</div>
-            <div class="menu-title" @click.stop="menuOpen = !menuOpen">
-                <b>{{ texts.header_2.Texte }}</b> <img src="./assets/chevron.svg" alt="">
-            </div>
-        </nav>
-        <li class="menu" v-if="menuOpen">
-            <a href="/aubervilliers" @click.prevent="navigate('/aubervilliers'); menuOpen = !menuOpen">
-                <ul>
-                    <div class="menu-lien">{{ texts.header_3.Texte }}</div>
-                    <div class="menu-desc">{{ texts.header_5.Texte }}</div>
-                </ul>
-            </a>
-            <a href="/habitants" @click.prevent="navigate('/habitants'); menuOpen = !menuOpen">
-                <ul>
-                    <div class="menu-lien">{{ texts.header_6.Texte }}</div>
-                    <div class="menu-desc">{{ texts.header_8.Texte }}</div>
-                </ul>
-            </a>
-            <a href="/bati" @click.prevent="navigate('/bati'); menuOpen = !menuOpen">
-                <ul>
-                    <div class="menu-lien">{{ texts.header_9.Texte }}</div>
-                    <div class="menu-desc">{{ texts.header_11.Texte }}</div>
-                </ul>
-            </a>
-            <a href="/manufactures" @click.prevent="navigate('/manufactures'); menuOpen = !menuOpen">
-                <ul>
-                    <div class="menu-lien">{{ texts.header_12.Texte }}</div>
-                    <div class="menu-desc">{{ texts.header_14.Texte }}</div>
-                </ul>
-            </a>
-        </li>
-    </header>
+  <header>
+    <a href="#/" @click.prevent="navigate('#/')">
+      <img src="./assets/logo.svg" alt="" class="logo">
+    </a>
+    <nav>
+      <div class="label">Les terrains d'études :</div>
+      <div class="menu-title" @click.stop="menuOpen = !menuOpen">
+        <b>{{ texts.header_2.Texte }}</b> <img src="./assets/chevron.svg" alt="">
+      </div>
+    </nav>
+    <li class="menu" v-if="menuOpen">
+      <a href="#/aubervilliers" @click.prevent="navigate('#/aubervilliers')">
+        <ul>
+          <div class="menu-lien">{{ texts.header_3.Texte }}</div>
+          <div class="menu-desc">{{ texts.header_5.Texte }}</div>
+        </ul>
+      </a>
+      <a href="#/habitants" @click.prevent="navigate('#/habitants')">
+        <ul>
+          <div class="menu-lien">{{ texts.header_6.Texte }}</div>
+          <div class="menu-desc">{{ texts.header_8.Texte }}</div>
+        </ul>
+      </a>
+      <a href="#/bati" @click.prevent="navigate('#/bati')">
+        <ul>
+          <div class="menu-lien">{{ texts.header_9.Texte }}</div>
+          <div class="menu-desc">{{ texts.header_11.Texte }}</div>
+        </ul>
+      </a>
+      <a href="#/manufactures" @click.prevent="navigate('#/manufactures')">
+        <ul>
+          <div class="menu-lien">{{ texts.header_12.Texte }}</div>
+          <div class="menu-desc">{{ texts.header_14.Texte }}</div>
+        </ul>
+      </a>
+    </li>
+  </header>
 </template>
 
 <style scoped>

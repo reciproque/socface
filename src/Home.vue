@@ -58,7 +58,7 @@ const secondLineImages = computed(() => {
 
         <h2>{{ texts.home_3.Texte }}</h2>
         <p class="paragraphe">{{ texts.home_4.Texte }}</p>
-        <a href="/aubervilliers" class="internal-link">{{ texts.home_5.Texte }} <img src="./assets/arrow.svg"
+        <a href="#/aubervilliers" class="internal-link">{{ texts.home_5.Texte }} <img src="./assets/arrow.svg"
                 alt=""></a>
     </div>
 </template>

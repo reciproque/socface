@@ -22,66 +22,87 @@ function topFunction() {
   document.documentElement.scrollTop = 0
 }
 
-// Liste des URL pour routing et rebonds en bas de page
+// Routes pour les pages
 const routes = {
-  '/': Home,
-  '/aubervilliers': PageAubervilliers,
-  '/habitants': PageHabitants,
-  '/bati': PageBati,
-  '/manufactures': PageManufactures
+  '#/': Home,
+  '#/aubervilliers': PageAubervilliers,
+  '#/habitants': PageHabitants,
+  '#/bati': PageBati,
+  '#/manufactures': PageManufactures,
 }
 
-const currentPath = ref(window.location.pathname)
+// Hash actuel
+const currentHash = ref(window.location.hash || '#/')
 
+// Composant actuel
 const currentView = computed(() => {
-  return routes[currentPath.value] || Home
+  return routes[currentHash.value] || Home
 })
 
+// Mettre à jour le hash et le composant
+const navigate = (path) => {
+  window.location.hash = path
+  currentHash.value = path
+  topFunction()
+}
+
+// Gérer les ancres internes
+const handleAnchorClick = (e) => {
+  const href = e.target.getAttribute('href')
+  if (href && href.startsWith('#') && !href.startsWith('#/')) {
+    e.preventDefault()
+    const targetId = href.substring(1)
+    const targetElement = document.getElementById(targetId)
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+}
+
+// Écouter les changements de hash
+onMounted(() => {
+  window.addEventListener('hashchange', () => {
+    currentHash.value = window.location.hash
+    topFunction()
+  })
+
+  // Écouter les clics sur les ancres internes
+  document.addEventListener('click', handleAnchorClick)
+})
+
+// Rebonds
 const rebonds = [
   {
-    path: '/habitants',
+    path: '#/habitants',
     name: texts.rebond_2.Texte,
     image: rebond1,
     description: texts.rebond_3.Texte,
-    lien: "/habitants"
+    lien: '#/habitants'
   },
   {
-    path: '/bati',
+    path: '#/bati',
     name: texts.rebond_4.Texte,
     image: rebond2,
     description: texts.rebond_5.Texte,
-    lien: "/bati"
+    lien: '#/bati'
   },
   {
-    path: '/manufactures',
+    path: '#/manufactures',
     name: texts.rebond_6.Texte,
     image: rebond3,
     description: texts.rebond_7.Texte,
-    lien: "/manufactures"
+    lien: '#/manufactures'
   }
 ]
 
 const filteredRebonds = computed(() => {
-  return rebonds.filter(rebond => rebond.path !== currentPath.value)
-})
-
-watch(currentPath, () => {
-  topFunction()
-})
-
-onMounted(() => {
-  window.addEventListener('popstate', () => {
-    currentPath.value = window.location.pathname
-  })
-  window.addEventListener('route-change', () => {
-    currentPath.value = window.location.pathname
-  })
+  return rebonds.filter(rebond => rebond.path !== currentHash.value)
 })
 </script>
 
 <template>
-  <NavBar />
+  <NavBar @navigate="navigate" />
   <component :is="currentView" />
-  <Rebond :rebonds="filteredRebonds" :title="(currentPath != '/' && currentPath != '/aubervilliers')" />
+  <Rebond :rebonds="filteredRebonds" :title="(currentHash != '#/') && (currentHash != '#/aubervilliers')" />
   <SiteFooter />
 </template>
